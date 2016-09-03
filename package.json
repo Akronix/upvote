@@ -1,0 +1,28 @@
+{
+  "name": "telegram-teem-bridge-bot",
+  "version": "1.0.0",
+  "description": "A telegram bot to forward messages between teem chat and telegram messenger",
+  "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.23.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akronix/telegram-teem-bridge-bot.git"
+  },
+  "keywords": [
+    "teem",
+    "telegram",
+    "bot"
+  ],
+  "author": "Abel 'Akronix' Serrano Juste <akronix5@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Akronix/telegram-teem-bridge-bot/issues"
+  },
+  "homepage": "https://github.com/Akronix/telegram-teem-bridge-bot#readme"
+}
