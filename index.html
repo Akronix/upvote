@@ -2,93 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Collaborative canvas</title>
-
-  <script type="text/javascript" src="http://localhost:9898/swellrt.js"></script>
-  <script type="text/javascript">
-    SwellRT.ready(function() {
-
-      console.log("SwellRT is ready to use!");
-
-      SwellRT.startSession("http://localhost:9898", SwellRT.user.ANONYMOUS, "",
-        function(sessionInfo) {
-
-          if (false)
-            createNewModel()
-
-          SwellRT.openModel( localStorage.modelId,
-           function(model) {
-                // keep the reference in a global var
-                obj = model;
-                // Get the root map of the collaborative model
-                var root = obj.root
-
-                painting = obj.root.get("painting")
-                circle = paintCircle(50,50,40,'green',4,"yellow")
-                renderSVG(circle)
-            });
-
-        }, function(error) {
-          console.log("Error trying to start a session with the server")
-        });
-    });
-
-    function createNewModel() {
-      var objId = SwellRT.createModel(
-        function(model) {
-        // handy declarations for the easy management
-        obj = model;
-        var root = obj.root
-        // Create a new painting:
-        painting = obj.createList()
-        painting = root.put("painting", painting);
-        // store model id in local storage to retrive the data in future sessions
-        localStorage.modelId = objId;
-        console.log("New model created with id '" + localStorage.modelId + "' stored in local storage.")
-      })
-      return objId;
-    }
-
-    function renderSVG( ) {
-      console.log('Rendering SVG...')
-      canvas = document.getElementById('commonCanvas')
-      canvas.innerHTML = renderElement( )
-      console.log('rendered SVG!')
-    }
-
-    function renderElement( ) {
-      switch (circle.get('type').getValue()) {
-        case "circle":
-            ret = '<circle cx=' + circle.get('cx').getValue() +' cy='+circle.get('cy').getValue() +
-            ' r='+ circle.get('r').getValue() + ' />';
-        break;
-      }
-      console.log('rendered circle!')
-      return ret;
-    }
-
-    function paintCircle(cx,cy,radius,strokeColor,strokeWidth,fillColor) {
-      var sharedCircle = obj.createMap();
-      sharedCircle = painting.add(sharedCircle)
-      sharedCircle.put('type', "circle");
-      sharedCircle.put("cx", String(cx));
-      sharedCircle.put('cy', String(cy));
-      sharedCircle.put('r', String(radius));
-      sharedCircle.put('stroke', strokeColor);
-      sharedCircle.put('stroke-width', String(strokeWidth));
-      sharedCircle.put('fill', fillColor);
-      console.log('Created a new SwellRT element')
-      return sharedCircle
-    }
-
-    // function shareElement(painting, element) {
-    //   return painting.add(painting);
-    // }
-
-  </script>
+  <title>Skizo - A collaborative canvas</title>
 </head>
 <body>
   <svg id="commonCanvas" width="100" height="100">
   </svg>
+
+<script type="text/javascript" src="http://demo.swellrt.org/swellrt/swellrt.nocache.js"></script>
+<script type="text/javascript" src="./entry.js"></script>
+<script type="text/javascript" src="./render.js"></script>
+<script type="text/javascript">
+  SwellRT.ready(onSwellRTReady);
+</script>
+
 </body>
 </html>
