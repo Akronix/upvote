@@ -9,13 +9,13 @@ function createNewModel() {
        // Create a new painting:
        painting = obj.createList()
        painting = root.put("painting", painting);
-       // store model id in local storage to retrive the data in future sessions
        localStorage.modelId = objId;
-       console.log("New model created with id '" + localStorage.modelId + "' stored in local storage.")
+       // Make wave public for the local.net domain
+       obj.addParticipant("@local.net");
      })
-     // Make wave public for the local.net domain
-     obj.addParticipant("@local.net");
+     // store model id in local storage to retrive the data in future sessions
 
+     console.log("New model created with id '" + localStorage.modelId + "' stored in local storage.")
      return objId;
    }
 
@@ -37,7 +37,7 @@ function onSwellRTReady() {
 
   SwellRT.startSession("http://localhost:9898/", SwellRT.user.ANONYMOUS, "" ,
   function ( sessionInfo ) {
-    if ( !localStorage.modelId )
+    if ( true )
       createNewModel();
 
     console.log("Session started");
