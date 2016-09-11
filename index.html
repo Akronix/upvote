@@ -8,10 +8,29 @@
   <svg id="commonCanvas" width="100" height="100">
   </svg>
 
-<script type="text/javascript" src="http://demo.swellrt.org/swellrt/swellrt.nocache.js"></script>
+<script type="text/javascript" src="http://localhost:9898/swellrt/swellrt.nocache.js"></script>
 <script type="text/javascript" src="./entry.js"></script>
 <script type="text/javascript" src="./render.js"></script>
 <script type="text/javascript">
+window.__atmosphere_config = {
+
+  logLevel: "debug", // info, debug
+  transport: "websocket",
+  fallbackTransport: "long-polling",
+  pollingInterval: 5000,
+  trackMessageLength: true,
+  enableXDR: true,
+  readResponsesHeaders: false,
+  withCredentials: true,
+  dropHeaders: true,
+  timeout: 27000,
+
+  connectTimeout: -1,
+  reconnectInterval: 5000,
+  maxReconnectOnClose: 5,
+  reconnectOnServerError: true,
+
+};
   SwellRT.ready(onSwellRTReady);
 </script>
 
