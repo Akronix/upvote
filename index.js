@@ -1,30 +1,11 @@
 // global vars
 var _model, _root;
 
-function createNewModel() {
-  var id = SwellRT.createModel(
-    function(model) {
-      console.log('G');
-       // Add a participant to participate in the data model
-       model.addParticipant("@local.net");
-       // Add Responses List
-       list1 = model.createList();
-       model.root.put("responses",list1);
-       // Add points List
-       list2 = model.createList();
-       model.root.put("points",list2);
-
-     });
-     // Get the root map of the collaborative model
-     console.log("New model: " + id)
-  return id;
-}
-
 function onSwellRTReady() {
 
   console.log("SwellRT is ready to use");
   // sesion
-  SwellRT.startSession("http://localhost:9898/", SwellRT.user.ANONYMOUS, "" ,
+  SwellRT.startSession("http://demo.swellrt.org/", SwellRT.user.ANONYMOUS, "" ,
     function ( sessionInfo ) {
       console.log("Session started");
 
