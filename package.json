@@ -10,5 +10,9 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-defaults": "^9.0.0"
   }
 }

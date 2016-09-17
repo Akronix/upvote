@@ -3,18 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Upvote - Find the best idea</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bulma/css/bulma.css" />
+  <link rel="stylesheet" type="text/css" href="custom.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.2/css/bulma.min.css"> -->
 </head>
 <body>
 
-  <button onclick="newQuestion()">New Question</button>
-
-  <h1 id="question"></h1>
-
-  <div id="responses">
-
+<header class="hero">
+  <div class="hero-head">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-right">
+          <span class="nav-item">
+            <button class="button is-success" onclick="newQuestion()">New Question</button>
+          </span>
+        </div>
+      </nav>
+    </div>
   </div>
-  <textarea label="Type here your response" id="text"></textarea>
-  <button onclick="post()">Post</button>
+</header>
+
+<section class="section">
+<article class="message">
+  <div class="message-header">
+    This is the question
+  </div>
+  <div class="message-body">
+    <h1 class="title is-2" id="question"></h1>
+  </div>
+</article>
+</section>
+
+  <main class="section">
+    <div id="responses" class="container">
+
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <textarea rows="3" cols="80" label="Type here your response" id="text"></textarea>
+    </div>
+    <div class="container">
+      <button class="button is-info" onclick="post()">Post</button>
+    </div>
+  </section>
 
 <script type="text/javascript">
 window.__atmosphere_config = {

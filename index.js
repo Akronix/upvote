@@ -155,7 +155,12 @@ function registerEventHandlers() {
 }
 
 function renderPost( answer, num, points ) {
-  var rendered = Mustache.render('<div id={{num}} data-points={{points}}><p>{{answer}}</p><p>Points: {{points}}</p><button onclick=up({{num}})>Up</button></div>',
+  var rendered = Mustache.render('<div id={{num}} data-points={{points}} class="box"><div class="level">' +
+  '<div class="level-left"><div class="level-item"><p>{{answer}}</p></div></div>' +
+  '<div class="level-right">'+
+  '<div class="level-item"><p>Points: {{points}}</p></div>' +
+  '<div class="level-item"><button class="button is-primary" onclick=up({{num}})>Up</button></div></div>' +
+  '</div></div>',
   {answer: answer, num: num, points:points})
   return rendered;
 }
