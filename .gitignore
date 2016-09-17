@@ -38,3 +38,5 @@ jspm_packages
 
 # Akronix:
 .eslintrc
+.backup/
+bower_components/

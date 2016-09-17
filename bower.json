@@ -1,0 +1,22 @@
+{
+  "name": "upvote",
+  "description": "Find the best idea.",
+  "main": "index.html",
+  "authors": [
+    "Abel 'Akronix' Serrano Juste <akronix5@gmail.com>"
+  ],
+  "license": "AGPL-3.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mustache.js": "mustache#^2.2.1",
+    "jquery": "^3.1.0"
+  }
+}

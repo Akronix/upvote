@@ -1,33 +1,14 @@
 {
-  "name": "skizo",
+  "name": "upvote",
   "version": "1.0.0",
-  "description": "A collaborative canvas based on SwellRT",
-  "main": "entry.js",
+  "description": "Find the best idea.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Akronix/skizo.git"
-  },
-  "keywords": [
-    "skizo",
-    "canvas",
-    "graphics",
-    "svg",
-    "collaborative",
-    "web",
-    "SwellRT"
-  ],
-  "author": "Abel 'Akronix' Serrano Juste",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/Akronix/skizo/issues"
-  },
-  "homepage": "https://github.com/Akronix/skizo#readme",
-  "devDependencies": {
-    "eslint": "^3.5.0",
-    "eslint-config-defaults": "^9.0.0",
-    "eslint-plugin-filenames": "^1.1.0"
+  "author": "",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "bower": "^1.7.9"
   }
 }
